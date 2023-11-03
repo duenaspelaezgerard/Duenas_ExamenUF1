@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL CELLER DE CAN ROCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+
+        body{
+            background-color: #8fcffb; /* Azul */
+        }
+        .bg-primary-custom {
+            background-color: #3498db; /* Azul */
+            color: #fff; /* Texto blanco */
+        }
+
+        .input-custom {
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-primary-custom text-white" id="inputGroup-sizing-default">Cercador: </span>
+            <input type="text" class="form-control input-custom" aria-label="Sizing example input" id="palabraInvestigar" placeholder="Paraula">
+            <button class="btn btn-primary" id="buscarBtn">Buscar</button>
+        </div>
+
+        <div class="input-group mt-3">
+            <label class="input-group-text bg-primary-custom bg-primary-custom text-white" for="inputGroupSelect01">Menú: </label>
+            <select class="form-select input-custom" id="diaSelect">
+                <option selected></option>
+                <option value="0">Lunes</option>
+                <option value="1">Martes</option>
+                <option value="2">Miércoles</option>
+                <option value="3">Jueves</option>
+                <option value="4">Viernes</option>
+            </select>
+        </div>
+
+        <div class="input-group mt-3">
+            <span class="input-group-text bg-primary-custom text-white">Horario de Apertura: </span>
+            <input type="time" class="form-control input-custom" id="horaApertura">
+        </div>
+    
+        <div class="input-group mt-3">
+            <span class="input-group-text bg-primary-custom text-white">Horario de Cierre: </span>
+            <input type="time" class="form-control input-custom" id="horaCierre">
+        </div>
+    
+        <button class="btn btn-primary-custom text-white mt-3 mb-3  " id="calcularBtn">Calcular Tiempo</button>
+        <label id="tiempoRestanteLabel" class="btn btn-primary-custom text-white mt-3 mb-3"></label>
+
+        <div class="card mt-3 bg-primary-custom">
+            <div class="card-header">Menú del Día</div>
+            <div class="card-body">
+                <h5 id="dia" class="card-title"></h5>
+                <h6 class="card-subtitle mb-2 text-light">Primeros:</h6>
+                <p id="comidaPrimero" class="card-text"></p>
+                <h6 class="card-subtitle mb-2 text-light">Segundos:</h6>
+                <p id="comidaSegundo" class="card-text"></p>
+                <h6 class="card-subtitle mb-2 text-light">Postres:</h6>
+                <p id="Postre" class="card-text"></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
